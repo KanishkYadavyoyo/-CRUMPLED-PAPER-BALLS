@@ -26,8 +26,8 @@ function setup() {
 		density:1.2,
 	}
 	groundObj = new Ground(200,580,1200,20);
-	rightwall = new Ground(650,550,10,50);
-	leftwall = new Ground(520,550,10,50);
+	rightwall = new Ground(650,550,10,100);
+	leftwall = new Ground(520,550,10,100);
 	//Create the Bodies Here.
     ball = Bodies.circle(150,40,20,ball_options);
    World.add(world,ball);
@@ -49,8 +49,8 @@ function draw() {
 }
 function keyPressed()
 {
-	if(keyCode=== UP_ARROW)
+	if(keyCode === 32)
 	{
-		Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:0})
+		Matter.Body.applyForce(ball,{x:0,y:0},{x:85,y:-85})
 	}
 }
